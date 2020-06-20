@@ -1,0 +1,12 @@
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\bin\Debug\netcoreapp3.1\Base.Negocio.deps.json
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\bin\Debug\netcoreapp3.1\Base.Negocio.runtimeconfig.json
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\bin\Debug\netcoreapp3.1\Base.Negocio.runtimeconfig.dev.json
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\bin\Debug\netcoreapp3.1\Base.Negocio.dll
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\bin\Debug\netcoreapp3.1\Base.Negocio.pdb
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\obj\Debug\netcoreapp3.1\Base.Negocio.csprojAssemblyReference.cache
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\obj\Debug\netcoreapp3.1\Base.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\obj\Debug\netcoreapp3.1\Base.Negocio.AssemblyInfoInputs.cache
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\obj\Debug\netcoreapp3.1\Base.Negocio.AssemblyInfo.cs
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\obj\Debug\netcoreapp3.1\Base.Negocio.dll
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\obj\Debug\netcoreapp3.1\Base.Negocio.pdb
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.Negocio\obj\Debug\netcoreapp3.1\Base.Negocio.genruntimeconfig.cache

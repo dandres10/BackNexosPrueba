@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Datos", "3.Datos", "{09E2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.InterfacesComunes", "4.InterfacesComunes", "{6A7A9E5C-A88F-4A62-9B9E-6FF0176DE847}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{8ED2CAD5-627F-4A41-81C0-56067120EB1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{8ED2CAD5-627F-4A41-81C0-56067120EB1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Negocio", "Base.Negocio\Base.Negocio.csproj", "{A66CD30B-FEAC-49BA-A77B-0B76D18E9DD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.Negocio", "Base.Negocio\Base.Negocio.csproj", "{A66CD30B-FEAC-49BA-A77B-0B76D18E9DD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Datos", "Base.Datos\Base.Datos.csproj", "{AE25842D-DE62-4281-962C-E6AD7CA1BCD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.Datos", "Base.Datos\Base.Datos.csproj", "{AE25842D-DE62-4281-962C-E6AD7CA1BCD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.IC", "Base.IC\Base.IC.csproj", "{2FA9F02D-2F68-4194-85F2-A0FAF4F04BA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.IC", "Base.IC\Base.IC.csproj", "{2FA9F02D-2F68-4194-85F2-A0FAF4F04BA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
