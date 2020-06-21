@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XaE48wocoxmLLqWLaCMNxQw/dj4Is1WsL4S3YEFtVMeDCCtHLiLeubKI91us1/CwVExEsvG6ReQg9j0qQsDshA==",
+  "dgSpecHash": "u0SJT3lG1Yxc/q00OS2qArq1znEokebce+on8IpYClrfy9OJKvCLDCa7jXbKMwZEHNsf5J7C+jqGz77jb4caqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.Negocio\\Base.Negocio.csproj",
+  "projectFilePath": "C:\\Users\\dandr\\Desktop\\Prueba\\Git\\BackNexosPrueba\\Base.Negocio\\Base.Negocio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dandr\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\dandr\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

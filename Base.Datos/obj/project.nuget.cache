@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OVXlIVJbQXNqAfwl/DYYc4dqGM1J2/LgDZoe7Gw3Js+tdZzS9PjElpOOh/tvS4KMC/dpYJI3pUXlnv0lNZ4/KA==",
+  "dgSpecHash": "AkREbOE1E7N7HEOL+6ygpVL0UHTbCG7xhHCxg26HW6Q/8vZB+uzO/HplY0N51RQsyXxQ/hhaX6hspKc4DgLCAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.Datos\\Base.Datos.csproj",
+  "projectFilePath": "C:\\Users\\dandr\\Desktop\\Prueba\\Git\\BackNexosPrueba\\Base.Datos\\Base.Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dandr\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\dandr\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

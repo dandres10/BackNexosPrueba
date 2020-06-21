@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6u7nWkYfniOwW2H2hSmChWt2zTWlRGD/WBM3pH/1btC82hnLBOxVyMU2+r5jSrdCBna5NfrrPRD6Nny39y8EJw==",
+  "dgSpecHash": "nji2dh3o8ZXm5etLodrSWToffQYLOmlNJAcyTQO2p9n8Jgd5dN3MSdBZVd7ggOzwQR3t0eO9A6hT9/wVrp3emQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\dandr\\Desktop\\Prueba\\Git\\BackNexosPrueba\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dandr\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\dandr\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

@@ -5220,11 +5220,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.Datos\\Base.Datos.csproj",
+      "projectUniqueName": "C:\\Users\\dandr\\Desktop\\Prueba\\Git\\BackNexosPrueba\\Base.Datos\\Base.Datos.csproj",
       "projectName": "Base.Datos",
-      "projectPath": "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.Datos\\Base.Datos.csproj",
+      "projectPath": "C:\\Users\\dandr\\Desktop\\Prueba\\Git\\BackNexosPrueba\\Base.Datos\\Base.Datos.csproj",
       "packagesPath": "C:\\Users\\dandr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.Datos\\obj\\",
+      "outputPath": "C:\\Users\\dandr\\Desktop\\Prueba\\Git\\BackNexosPrueba\\Base.Datos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -5244,8 +5244,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.IC\\Base.IC.csproj": {
-              "projectPath": "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.IC\\Base.IC.csproj"
+            "C:\\Users\\dandr\\Desktop\\Prueba\\Git\\BackNexosPrueba\\Base.IC\\Base.IC.csproj": {
+              "projectPath": "C:\\Users\\dandr\\Desktop\\Prueba\\Git\\BackNexosPrueba\\Base.IC\\Base.IC.csproj"
             }
           }
         }
