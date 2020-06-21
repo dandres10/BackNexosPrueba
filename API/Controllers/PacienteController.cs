@@ -1,11 +1,13 @@
 ﻿namespace API.Controllers
 {
-    using API.Models;
+    using API.Models.Paciente;
     using AutoMapper;
     using Base.IC.Clases;
     using Base.IC.DTO.EntidadesRepositorio;
+    using Base.IC.RecursosTexto;
     using Base.Negocio.Clases.BL;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
     using System.Threading.Tasks;
 
     [Route("api/[controller]")]
@@ -14,25 +16,29 @@
     {
         private readonly PacienteBL pacienteBL;
         private readonly IMapper mapper;
+        private readonly ILogger<PacienteController> logger;
 
-        public PacienteController(PacienteBL pacienteBL, IMapper mapper)
+        public PacienteController(PacienteBL pacienteBL, IMapper mapper, ILogger<PacienteController> logger)
         {
             this.pacienteBL = pacienteBL;
             this.mapper = mapper;
+            this.logger = logger;
+            logger.LogInformation(LoggerPaciente.CapaControlador);
         }
 
         [HttpGet]
         [Route("ConsultarListaPacientes")]
         public async Task<Respuesta<PacienteCO>> ConsultarListaPacientes()
         {
-            return mapper.Map<Respuesta<PacienteCO>>(await pacienteBL.ConsultarListaPacientes()); 
+            logger.LogInformation(LoggerPaciente.ConsultarListaPacientes);
+            return mapper.Map<Respuesta<PacienteCO>>(await pacienteBL.ConsultarListaPacientes());
         }
 
         [HttpGet]
         [Route("ConsultarPaciente")]
-        public async Task<Respuesta<PacienteCO>> ConsultarPaciente(PacienteCO paciente)
+        public async Task<Respuesta<PacienteCO>> ConsultarPaciente(PacienteConsulta paciente)
         {
-            
+            logger.LogInformation(LoggerPaciente.ConsultarPaciente);
             return mapper.Map<Respuesta<PacienteCO>>(await pacienteBL.ConsultarPaciente(mapper.Map<IPacienteDTO>(paciente)));
         }
 
@@ -40,6 +46,7 @@
         [Route("EditarPaciente")]
         public async Task<Respuesta<PacienteCO>> EditarPaciente(PacienteCO paciente)
         {
+            logger.LogInformation(LoggerPaciente.EditarPaciente);
             return mapper.Map<Respuesta<PacienteCO>>(await pacienteBL.EditarPaciente(mapper.Map<IPacienteDTO>(paciente)));
         }
 
@@ -47,13 +54,15 @@
         [Route("EliminarPaciente")]
         public async Task<Respuesta<PacienteCO>> EliminarPaciente(PacienteCO paciente)
         {
+            logger.LogInformation(LoggerPaciente.EliminarPaciente);
             return mapper.Map<Respuesta<PacienteCO>>(await pacienteBL.EliminarPaciente(mapper.Map<IPacienteDTO>(paciente)));
         }
 
         [HttpPost]
         [Route("GuardarPaciente")]
-        public async Task<Respuesta<PacienteCO>> GuardarPaciente(PacienteCO paciente)
+        public async Task<Respuesta<PacienteCO>> GuardarPaciente(PacienteGuardar paciente)
         {
+            logger.LogInformation(LoggerPaciente.GuardarPaciente);
             return mapper.Map<Respuesta<PacienteCO>>(await pacienteBL.GuardarPaciente(mapper.Map<IPacienteDTO>(paciente)));
         }
     }

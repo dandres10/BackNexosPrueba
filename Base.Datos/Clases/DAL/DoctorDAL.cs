@@ -34,23 +34,23 @@
             this.listaMensajes = new List<string>();
             this.listaDoctor = new List<IDoctorDTO>();
             this.data = new Doctor();
+            logger.LogWarning(LoggerDoctor.CapaDatos);
         }
 
         public async Task<Respuesta<IDoctorDTO>> ConsultarDoctor(IDoctorDTO doctor)
         {
-
             try
             {
                 data = await context.Doctor.FirstOrDefaultAsync(x => x.CodigoDoctor == doctor.CodigoDoctor);
                 if (data == null)
                 {
-                    logger.LogWarning($"Doctor con ID {doctor.CodigoDoctor} no ha sido encontrado");
+                    logger.LogWarning(string.Format(LoggerDoctor.DoctorNoEncontrado, doctor.CodigoDoctor));
                     listaMensajes.Add(MensajesBase.DatoNoEncontrado);
                     Respuesta = Respuestas.Alerta(listaMensajes);
                 }
                 else
                 {
-                    logger.LogInformation("Doctor consultado  correctamente");
+                    logger.LogInformation(LoggerDoctor.DoctorConsultaCorrecta);
                     listaDoctor.Add(data);
                     listaMensajes.Add(MensajesBase.ConsultaExitosa);
                     Respuesta = Respuestas.Exitosa(listaDoctor, listaMensajes);
@@ -58,7 +58,7 @@
             }
             catch (Exception)
             {
-                logger.LogError("La consulta fallo");
+                logger.LogError(LoggerDoctor.ConsultaFallo);
                 listaMensajes.Add(MensajesBase.ConsultaFallida);
                 Respuesta = Respuestas.Fallida(listaMensajes);
             }
@@ -72,9 +72,11 @@
                 listaDoctor = mapper.Map<List<IDoctorDTO>>(await context.Doctor.ToListAsync());
                 listaMensajes.Add(MensajesBase.ConsultaExitosa);
                 Respuesta = Respuestas.Exitosa(listaDoctor, listaMensajes);
+                logger.LogInformation(LoggerDoctor.DoctorConsultaCorrecta);
             }
             catch (Exception)
             {
+                logger.LogError(LoggerDoctor.ConsultaFallo);
                 listaMensajes.Add(MensajesBase.ConsultaFallida);
                 Respuesta = Respuestas.Fallida(listaMensajes);
             }
@@ -90,9 +92,11 @@
                 await context.SaveChangesAsync();
                 listaMensajes.Add(MensajesBase.GuardadoExitoso);
                 Respuesta = Respuestas.Exitosa(listaDoctor, listaMensajes);
+                logger.LogInformation(LoggerDoctor.DoctorGuardado);
             }
             catch (Exception)
             {
+                logger.LogError(LoggerDoctor.ConsultaFallo);
                 listaMensajes.Add(MensajesBase.GuardadoFallido);
                 Respuesta = Respuestas.Fallida(listaMensajes);
             }

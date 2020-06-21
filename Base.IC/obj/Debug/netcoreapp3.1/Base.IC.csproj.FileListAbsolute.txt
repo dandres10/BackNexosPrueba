@@ -3,8 +3,9 @@ C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\bin\Debug\netcoreapp3.1\Ba
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\bin\Debug\netcoreapp3.1\Base.IC.runtimeconfig.dev.json
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\bin\Debug\netcoreapp3.1\Base.IC.dll
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\bin\Debug\netcoreapp3.1\Base.IC.pdb
-C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.csprojAssemblyReference.cache
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.RecursosTexto.LoggerDoctor.resources
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.RecursosTexto.MensajesBase.resources
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.RecursosTexto.MensajeValidaciones.resources
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.csproj.GenerateResource.cache
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.csproj.CoreCompileInputs.cache
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.AssemblyInfoInputs.cache
@@ -12,4 +13,3 @@ C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Ba
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.dll
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.pdb
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.genruntimeconfig.cache
-C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.RecursosTexto.MensajeValidaciones.resources

@@ -1,6 +1,8 @@
 namespace API
 {
     using API.Models;
+    using API.Models.Doctor;
+    using API.Models.Paciente;
     using AutoMapper;
     using Base.Datos.Clases.DAL;
     using Base.Datos.Contexto;
@@ -32,11 +34,15 @@ namespace API
                 //Mapper Paciente
                 configuration.CreateMap<Respuesta<PacienteCO>, Respuesta<IPacienteDTO>>().ReverseMap();
                 configuration.CreateMap<PacienteCO, IPacienteDTO>().ReverseMap();
-                configuration.CreateMap<Paciente, IPacienteDTO>().ReverseMap();
+                configuration.CreateMap<Paciente, IPacienteDTO>().ReverseMap(); 
+                configuration.CreateMap<PacienteConsulta, IPacienteDTO>().ReverseMap(); 
+                configuration.CreateMap<PacienteGuardar, IPacienteDTO>().ReverseMap();
                 //Maper Doctor
                 configuration.CreateMap<Respuesta<DoctorCO>, Respuesta<IDoctorDTO>>().ReverseMap();
                 configuration.CreateMap<DoctorCO, IDoctorDTO>().ReverseMap();
                 configuration.CreateMap<Doctor, IDoctorDTO>().ReverseMap();
+                configuration.CreateMap<DoctorConsulta, IDoctorDTO>().ReverseMap(); 
+                configuration.CreateMap<DoctorGuradar, IDoctorDTO>().ReverseMap();
                 //Maper Especilidad
                 configuration.CreateMap<Respuesta<EspecialidadCO>, Respuesta<IEspecialidadDTO>>().ReverseMap();
                 configuration.CreateMap<EspecialidadCO, IEspecialidadDTO>().ReverseMap();
@@ -44,7 +50,7 @@ namespace API
                 //Maper Hospital
                 configuration.CreateMap<Respuesta<HospitalCO>, Respuesta<IHospitalDTO>>().ReverseMap();
                 configuration.CreateMap<HospitalCO, IHospitalDTO>().ReverseMap();
-                configuration.CreateMap<Hospital, IHospitalDTO>().ReverseMap(); 
+                configuration.CreateMap<Hospital, IHospitalDTO>().ReverseMap();
             }, typeof(Startup));
             //Paciente
             services.AddScoped<PacienteDAL>();
@@ -57,7 +63,7 @@ namespace API
             services.AddScoped<EspecialidadBL>();
             //Hospital
             services.AddScoped<HospitalDAL>();
-            services.AddScoped<HospitalBL>(); 
+            services.AddScoped<HospitalBL>();
 
             services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("AppConnection")));
             services.AddControllers();

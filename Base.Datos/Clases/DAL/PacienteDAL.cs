@@ -8,6 +8,7 @@
     using Base.IC.DTO.EntidadesRepositorio;
     using Base.IC.RecursosTexto;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Logging;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -17,21 +18,24 @@
     {
         private readonly Context context;
         private readonly IMapper mapper;
+        private readonly ILogger logger;
         private Respuesta<IPacienteDTO> Respuesta;
         private Respuestas<IPacienteDTO> Respuestas;
         private List<IPacienteDTO> listaPaciente;
         private List<string> listaMensajes;
         private Paciente data;
 
-        public PacienteDAL(Context context, IMapper mapper)
+        public PacienteDAL(Context context, IMapper mapper, ILogger logger)
         {
             this.Respuesta = new Respuesta<IPacienteDTO>();
             this.Respuestas = new Respuestas<IPacienteDTO>();
             this.context = context;
             this.mapper = mapper;
+            this.logger = logger;
             this.listaMensajes = new List<string>();
             this.listaPaciente = new List<IPacienteDTO>();
             this.data = new Paciente();
+            logger.LogInformation(LoggerPaciente.CapaDatos);
         }
 
         public async Task<Respuesta<IPacienteDTO>> ConsultarListaPacientes()
@@ -41,11 +45,13 @@
                 listaMensajes.Add(MensajesBase.ConsultaExitosa);
                 listaPaciente = mapper.Map<List<IPacienteDTO>>(await context.Paciente.ToListAsync());
                 Respuesta = Respuestas.Exitosa(listaPaciente, listaMensajes);
+                logger.LogInformation(LoggerPaciente.ConsultaExitosa);
             }
             catch (Exception)
             {
                 listaMensajes.Add(MensajesBase.ConsultaFallida);
                 Respuesta = Respuestas.Fallida(listaMensajes);
+                logger.LogError(LoggerPaciente.ErrorConsulta);
             }
             return Respuesta;
         }
@@ -59,18 +65,21 @@
                 {
                     listaMensajes.Add(MensajesBase.DatoNoEncontrado);
                     Respuesta = Respuestas.Alerta(listaMensajes);
+                    logger.LogWarning(string.Format(LoggerPaciente.PacienteNoEncontrado, paciente.CodigoPaciente));
                 }
                 else
                 {
                     listaPaciente.Add(data);
                     listaMensajes.Add(MensajesBase.ConsultaExitosa);
                     Respuesta = Respuestas.Exitosa(listaPaciente, listaMensajes);
+                    logger.LogInformation(LoggerPaciente.ConsultaPacienteExitosa);
                 }
             }
             catch (Exception)
             {
                 listaMensajes.Add(MensajesBase.ConsultaFallida);
                 Respuesta = Respuestas.Fallida(listaMensajes);
+                logger.LogInformation(LoggerPaciente.ErrorPaciente);
             }
             return Respuesta;
         }
@@ -84,11 +93,13 @@
                 listaPaciente.Add(mapper.Map<Paciente>(paciente));
                 listaMensajes.Add(MensajesBase.DatosEditados);
                 Respuesta = Respuestas.Exitosa(listaPaciente, listaMensajes);
+                logger.LogInformation(LoggerPaciente.EditarPacienteExitoso);
             }
             catch (Exception)
             {
                 listaMensajes.Add(MensajesBase.DatosNoEditados);
                 Respuesta = Respuestas.Fallida(listaMensajes);
+                logger.LogError(LoggerPaciente.ErrorConsulta);
             }
             return Respuesta;
         }
@@ -103,6 +114,7 @@
                 {
                     listaMensajes.Add(MensajesBase.DatoNoEncontrado);
                     Respuesta = Respuestas.Alerta(listaPaciente, listaMensajes);
+                    logger.LogWarning(string.Format(LoggerPaciente.EliminarPacienteNoExiste, paciente.CodigoPaciente));
                 }
                 else
                 {
@@ -110,12 +122,14 @@
                     await context.SaveChangesAsync();
                     listaMensajes.Add(MensajesBase.EliminacionExitosa);
                     Respuesta = Respuestas.Exitosa(listaMensajes);
+                    logger.LogInformation(LoggerPaciente.EliminadoCorrectamente);
                 }
             }
             catch (Exception)
             {
                 listaMensajes.Add(MensajesBase.EliminacionFallida);
                 Respuesta = Respuestas.Fallida(listaMensajes);
+                logger.LogError(LoggerPaciente.ErrorConsulta);
             }
 
             return Respuesta;
@@ -130,11 +144,13 @@
                 await context.SaveChangesAsync();
                 listaMensajes.Add(MensajesBase.GuardadoExitoso);
                 Respuesta = Respuestas.Exitosa(listaPaciente, listaMensajes);
+                logger.LogInformation(LoggerPaciente.PacienteGuardado);
             }
             catch (Exception)
             {
                 listaMensajes.Add(MensajesBase.GuardadoFallido);
                 Respuesta = Respuestas.Fallida(listaMensajes);
+                logger.LogError(LoggerPaciente.ErrorConsulta);
             }
 
             return Respuesta;

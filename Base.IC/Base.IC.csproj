@@ -14,6 +14,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="RecursosTexto\LoggerDoctor.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LoggerDoctor.resx</DependentUpon>
+    </Compile>
+    <Compile Update="RecursosTexto\LoggerPaciente.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LoggerPaciente.resx</DependentUpon>
+    </Compile>
     <Compile Update="RecursosTexto\MensajesBase.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -27,6 +37,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="RecursosTexto\LoggerDoctor.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoggerDoctor.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="RecursosTexto\LoggerPaciente.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoggerPaciente.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="RecursosTexto\MensajesBase.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MensajesBase.Designer.cs</LastGenOutput>
