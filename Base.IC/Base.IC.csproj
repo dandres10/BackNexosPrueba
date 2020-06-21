@@ -19,12 +19,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>MensajesBase.resx</DependentUpon>
     </Compile>
+    <Compile Update="RecursosTexto\MensajeValidaciones.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MensajeValidaciones.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="RecursosTexto\MensajesBase.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MensajesBase.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="RecursosTexto\MensajeValidaciones.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MensajeValidaciones.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

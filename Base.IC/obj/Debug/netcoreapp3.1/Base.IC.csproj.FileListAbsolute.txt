@@ -12,3 +12,4 @@ C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Ba
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.dll
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.pdb
 C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.genruntimeconfig.cache
+C:\Users\dandr\Desktop\Prueba\BackNexosPrueba\Base.IC\obj\Debug\netcoreapp3.1\Base.IC.RecursosTexto.MensajeValidaciones.resources

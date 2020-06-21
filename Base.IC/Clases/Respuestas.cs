@@ -6,10 +6,12 @@
     public class Respuestas<T>
     {
         private Respuesta<T> Respuesta;
+        private RespuestaValidacion RespuestaValidacion;
 
         public Respuestas()
         {
             this.Respuesta = new Respuesta<T>();
+            this.RespuestaValidacion = new RespuestaValidacion();
         }
 
         public Respuesta<T> Exitosa(List<T> entidades, List<string> mensaje)
@@ -52,6 +54,15 @@
             Respuesta.Resultado = false;
             Respuesta.TipoNotificacion = TipoNotificacion.Advertencia;
             return Respuesta;
+        }
+
+        public RespuestaValidacion ValidacionFallida(List<string> mensaje)
+        {
+            RespuestaValidacion.Mensajes.AddRange(mensaje);
+            RespuestaValidacion.Resultado = false;
+            Respuesta.TipoNotificacion = TipoNotificacion.Fallida;
+
+            return RespuestaValidacion;
         }
     }
 }

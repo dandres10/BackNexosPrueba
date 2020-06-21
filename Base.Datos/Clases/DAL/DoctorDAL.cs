@@ -8,6 +8,7 @@
     using Base.IC.DTO.EntidadesRepositorio;
     using Base.IC.RecursosTexto;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Logging;
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -16,18 +17,20 @@
     {
         private readonly Context context;
         private readonly IMapper mapper;
+        private readonly ILogger<DoctorDAL> logger;
         private Respuesta<IDoctorDTO> Respuesta;
         private Respuestas<IDoctorDTO> Respuestas;
         private List<IDoctorDTO> listaDoctor;
         private List<string> listaMensajes;
         private Doctor data;
 
-        public DoctorDAL(Context context, IMapper mapper)
+        public DoctorDAL(Context context, IMapper mapper, ILogger<DoctorDAL> logger)
         {
             this.Respuesta = new Respuesta<IDoctorDTO>();
             this.Respuestas = new Respuestas<IDoctorDTO>();
             this.context = context;
             this.mapper = mapper;
+            this.logger = logger;
             this.listaMensajes = new List<string>();
             this.listaDoctor = new List<IDoctorDTO>();
             this.data = new Doctor();
@@ -41,11 +44,13 @@
                 data = await context.Doctor.FirstOrDefaultAsync(x => x.CodigoDoctor == doctor.CodigoDoctor);
                 if (data == null)
                 {
+                    logger.LogWarning($"Doctor con ID {doctor.CodigoDoctor} no ha sido encontrado");
                     listaMensajes.Add(MensajesBase.DatoNoEncontrado);
                     Respuesta = Respuestas.Alerta(listaMensajes);
                 }
                 else
                 {
+                    logger.LogInformation("Doctor consultado  correctamente");
                     listaDoctor.Add(data);
                     listaMensajes.Add(MensajesBase.ConsultaExitosa);
                     Respuesta = Respuestas.Exitosa(listaDoctor, listaMensajes);
@@ -53,6 +58,7 @@
             }
             catch (Exception)
             {
+                logger.LogError("La consulta fallo");
                 listaMensajes.Add(MensajesBase.ConsultaFallida);
                 Respuesta = Respuestas.Fallida(listaMensajes);
             }
