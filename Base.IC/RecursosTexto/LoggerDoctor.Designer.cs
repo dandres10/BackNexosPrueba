@@ -61,7 +61,7 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a CapaControlador..
+        ///   Busca una cadena traducida similar a Pasando capa controlador..
         /// </summary>
         public static string CapaControlador {
             get {
@@ -70,7 +70,7 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Capa datos..
+        ///   Busca una cadena traducida similar a Pasando capa datos..
         /// </summary>
         public static string CapaDatos {
             get {
@@ -79,7 +79,7 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Capa negocio..
+        ///   Busca una cadena traducida similar a Pasando capa negocio..
         /// </summary>
         public static string CapaNegocio {
             get {
@@ -97,7 +97,7 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Consultar Doctor..
+        ///   Busca una cadena traducida similar a Consultando Doctor..
         /// </summary>
         public static string ConsultarDoctor {
             get {
@@ -106,7 +106,7 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Consultar Lista Doctores..
+        ///   Busca una cadena traducida similar a Consultando lista Doctores..
         /// </summary>
         public static string ConsultarListaDoctores {
             get {
@@ -115,7 +115,7 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Doctor consultado  correctamente.
+        ///   Busca una cadena traducida similar a Consulta realizada correctamente..
         /// </summary>
         public static string DoctorConsultaCorrecta {
             get {
@@ -124,7 +124,7 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Doctor Guardado..
+        ///   Busca una cadena traducida similar a Se guardo el doctor..
         /// </summary>
         public static string DoctorGuardado {
             get {
@@ -142,7 +142,7 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Guardar Doctor..
+        ///   Busca una cadena traducida similar a Se guardo el doctor..
         /// </summary>
         public static string GuardarDoctor {
             get {

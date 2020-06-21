@@ -61,7 +61,7 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Capa Controlador..
+        ///   Busca una cadena traducida similar a Pasando capa controlador..
         /// </summary>
         public static string CapaControlador {
             get {
@@ -70,7 +70,7 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Capa Datos..
+        ///   Busca una cadena traducida similar a Pasando capa datos..
         /// </summary>
         public static string CapaDatos {
             get {
@@ -79,7 +79,7 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Capa Negocio..
+        ///   Busca una cadena traducida similar a Pasando capa negocio..
         /// </summary>
         public static string CapaNegocio {
             get {

@@ -34,7 +34,7 @@
             this.listaMensajes = new List<string>();
             this.listaDoctor = new List<IDoctorDTO>();
             this.data = new Doctor();
-            logger.LogWarning(LoggerDoctor.CapaDatos);
+            logger.LogInformation(LoggerDoctor.CapaDatos);
         }
 
         public async Task<Respuesta<IDoctorDTO>> ConsultarDoctor(IDoctorDTO doctor)

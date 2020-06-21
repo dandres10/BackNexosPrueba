@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CapaControlador" xml:space="preserve">
-    <value>Capa Controlador.</value>
+    <value>Pasando capa controlador.</value>
   </data>
   <data name="CapaDatos" xml:space="preserve">
-    <value>Capa Datos.</value>
+    <value>Pasando capa datos.</value>
   </data>
   <data name="CapaNegocio" xml:space="preserve">
-    <value>Capa Negocio.</value>
+    <value>Pasando capa negocio.</value>
   </data>
   <data name="ConsultaExitosa" xml:space="preserve">
     <value>Consulta Exitosa.</value>

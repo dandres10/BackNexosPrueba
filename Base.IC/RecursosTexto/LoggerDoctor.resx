@@ -118,33 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CapaControlador" xml:space="preserve">
-    <value>CapaControlador.</value>
+    <value>Pasando capa controlador.</value>
   </data>
   <data name="CapaDatos" xml:space="preserve">
-    <value>Capa datos.</value>
+    <value>Pasando capa datos.</value>
   </data>
   <data name="CapaNegocio" xml:space="preserve">
-    <value>Capa negocio.</value>
+    <value>Pasando capa negocio.</value>
   </data>
   <data name="ConsultaFallo" xml:space="preserve">
     <value>La consulta fallo.</value>
   </data>
   <data name="ConsultarDoctor" xml:space="preserve">
-    <value>Consultar Doctor.</value>
+    <value>Consultando Doctor.</value>
   </data>
   <data name="ConsultarListaDoctores" xml:space="preserve">
-    <value>Consultar Lista Doctores.</value>
+    <value>Consultando lista Doctores.</value>
   </data>
   <data name="DoctorConsultaCorrecta" xml:space="preserve">
-    <value>Doctor consultado  correctamente</value>
+    <value>Consulta realizada correctamente.</value>
   </data>
   <data name="DoctorGuardado" xml:space="preserve">
-    <value>Doctor Guardado.</value>
+    <value>Se guardo el doctor.</value>
   </data>
   <data name="DoctorNoEncontrado" xml:space="preserve">
     <value>Doctor con ID {0} no encontrado</value>
   </data>
   <data name="GuardarDoctor" xml:space="preserve">
-    <value>Guardar Doctor.</value>
+    <value>Se guardo el doctor.</value>
   </data>
 </root>
