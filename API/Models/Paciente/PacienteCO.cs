@@ -9,9 +9,11 @@
         public int CodigoPaciente { get; set; }
 
         [Required]
+        [CantidadCaracteres(51)]
         public string Nombre { get; set; }
 
         [Required]
+        [CantidadCaracteres(51)]
         public string Apellido { get; set; }
 
         [Required]

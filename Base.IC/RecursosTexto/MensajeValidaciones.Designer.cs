@@ -61,6 +61,15 @@ namespace Base.IC.RecursosTexto {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a La catidad de caracteres sobre pasa los 50. .
+        /// </summary>
+        public static string CantidadCaracteres {
+            get {
+                return ResourceManager.GetString("CantidadCaracteres", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a La cantidad de digitos no corresponde..
         /// </summary>
         public static string CantidadDigitos {

@@ -2,7 +2,7 @@
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class PacienteConsulta
+    public class PacienteConsultaCO
     {
         [Required]
         public int CodigoPaciente { get; set; }

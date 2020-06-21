@@ -36,7 +36,7 @@
 
         [HttpGet]
         [Route("ConsultarPaciente")]
-        public async Task<Respuesta<PacienteCO>> ConsultarPaciente(PacienteConsulta paciente)
+        public async Task<Respuesta<PacienteCO>> ConsultarPaciente(PacienteConsultaCO paciente)
         {
             logger.LogInformation(LoggerPaciente.ConsultarPaciente);
             return mapper.Map<Respuesta<PacienteCO>>(await pacienteBL.ConsultarPaciente(mapper.Map<IPacienteDTO>(paciente)));
@@ -60,7 +60,7 @@
 
         [HttpPost]
         [Route("GuardarPaciente")]
-        public async Task<Respuesta<PacienteCO>> GuardarPaciente(PacienteGuardar paciente)
+        public async Task<Respuesta<PacienteCO>> GuardarPaciente(PacienteGuardarCO paciente)
         {
             logger.LogInformation(LoggerPaciente.GuardarPaciente);
             return mapper.Map<Respuesta<PacienteCO>>(await pacienteBL.GuardarPaciente(mapper.Map<IPacienteDTO>(paciente)));

@@ -25,7 +25,7 @@
         private List<string> listaMensajes;
         private Paciente data;
 
-        public PacienteDAL(Context context, IMapper mapper, ILogger logger)
+        public PacienteDAL(Context context, IMapper mapper, ILogger<PacienteDAL> logger)
         {
             this.Respuesta = new Respuesta<IPacienteDTO>();
             this.Respuestas = new Respuestas<IPacienteDTO>();

@@ -28,7 +28,7 @@
 
         [HttpGet]
         [Route("ConsultarDoctor")]
-        public async Task<Respuesta<DoctorCO>> ConsultarDoctor(DoctorConsulta doctor)
+        public async Task<Respuesta<DoctorCO>> ConsultarDoctor(DoctorConsultaCO doctor)
         {
             logger.LogInformation(LoggerDoctor.ConsultarDoctor);
             return mapper.Map<Respuesta<DoctorCO>>(await doctorBL.ConsultarDoctor(mapper.Map<IDoctorDTO>(doctor)));
@@ -44,7 +44,7 @@
 
         [HttpPost]
         [Route("GuardarDoctor")]
-        public async Task<Respuesta<DoctorCO>> GuardarDoctor(DoctorGuradar doctor)
+        public async Task<Respuesta<DoctorCO>> GuardarDoctor(DoctorGuradarCO doctor)
         {
             logger.LogInformation(LoggerDoctor.GuardarDoctor);
             return mapper.Map<Respuesta<DoctorCO>>(await doctorBL.GuardarDoctor(mapper.Map<IDoctorDTO>(doctor)));

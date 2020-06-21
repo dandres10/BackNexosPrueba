@@ -35,14 +35,14 @@ namespace API
                 configuration.CreateMap<Respuesta<PacienteCO>, Respuesta<IPacienteDTO>>().ReverseMap();
                 configuration.CreateMap<PacienteCO, IPacienteDTO>().ReverseMap();
                 configuration.CreateMap<Paciente, IPacienteDTO>().ReverseMap(); 
-                configuration.CreateMap<PacienteConsulta, IPacienteDTO>().ReverseMap(); 
-                configuration.CreateMap<PacienteGuardar, IPacienteDTO>().ReverseMap();
+                configuration.CreateMap<PacienteConsultaCO, IPacienteDTO>().ReverseMap(); 
+                configuration.CreateMap<PacienteGuardarCO, IPacienteDTO>().ReverseMap();
                 //Maper Doctor
                 configuration.CreateMap<Respuesta<DoctorCO>, Respuesta<IDoctorDTO>>().ReverseMap();
                 configuration.CreateMap<DoctorCO, IDoctorDTO>().ReverseMap();
                 configuration.CreateMap<Doctor, IDoctorDTO>().ReverseMap();
-                configuration.CreateMap<DoctorConsulta, IDoctorDTO>().ReverseMap(); 
-                configuration.CreateMap<DoctorGuradar, IDoctorDTO>().ReverseMap();
+                configuration.CreateMap<DoctorConsultaCO, IDoctorDTO>().ReverseMap(); 
+                configuration.CreateMap<DoctorGuradarCO, IDoctorDTO>().ReverseMap();
                 //Maper Especilidad
                 configuration.CreateMap<Respuesta<EspecialidadCO>, Respuesta<IEspecialidadDTO>>().ReverseMap();
                 configuration.CreateMap<EspecialidadCO, IEspecialidadDTO>().ReverseMap();

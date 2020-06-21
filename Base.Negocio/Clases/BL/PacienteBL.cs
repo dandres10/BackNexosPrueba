@@ -13,7 +13,7 @@
         private readonly PacienteDAL pacienteDAL;
         private readonly ILogger logger;
 
-        public PacienteBL(PacienteDAL pacienteDAL, ILogger logger)
+        public PacienteBL(PacienteDAL pacienteDAL, ILogger<PacienteBL> logger)
         {
             this.pacienteDAL = pacienteDAL;
             this.logger = logger;

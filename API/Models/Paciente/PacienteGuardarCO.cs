@@ -3,12 +3,14 @@
     using Base.IC.Validaciones;
     using System.ComponentModel.DataAnnotations;
 
-    public class PacienteGuardar
+    public class PacienteGuardarCO
     {
         [Required]
+        [CantidadCaracteres(51)]
         public string Nombre { get; set; }
 
         [Required]
+        [CantidadCaracteres(51)]
         public string Apellido { get; set; }
 
         [Required]
