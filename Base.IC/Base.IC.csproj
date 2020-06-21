@@ -14,10 +14,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Acciones\" />
-    <Folder Include="Clases\" />
-    <Folder Include="Enumeraciones\" />
-    <Folder Include="RecursosTexto\" />
+    <Compile Update="RecursosTexto\MensajesBase.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MensajesBase.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="RecursosTexto\MensajesBase.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MensajesBase.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

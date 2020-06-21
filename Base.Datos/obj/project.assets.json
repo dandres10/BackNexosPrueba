@@ -1357,6 +1357,23 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Base.IC/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.5"
+        },
+        "compile": {
+          "bin/placeholder/Base.IC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Base.IC.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -5179,11 +5196,17 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Base.IC/1.0.0": {
+      "type": "project",
+      "path": "../Base.IC/Base.IC.csproj",
+      "msbuildProject": "../Base.IC/Base.IC.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 7.0.0",
+      "Base.IC >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.5",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.5",
@@ -5220,7 +5243,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.IC\\Base.IC.csproj": {
+              "projectPath": "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.IC\\Base.IC.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

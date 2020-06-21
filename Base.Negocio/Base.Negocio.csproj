@@ -13,4 +13,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Datos\Base.Datos.csproj" />
+    <ProjectReference Include="..\Base.IC\Base.IC.csproj" />
+  </ItemGroup>
+
 </Project>

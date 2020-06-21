@@ -1,5 +1,6 @@
 ﻿namespace Base.IC.Clases
 {
+    using Base.IC.Enumeraciones;
     using System.Collections.Generic;
 
     public class Respuesta<T>
@@ -13,6 +14,10 @@
         public bool Resultado { get; set; }
         public List<T> Entidades { get; set; }
         public List<string> Mensajes { get; set; }
-        public int TipoNotificacion { get; set; }
+        public TipoNotificacion TipoNotificacion { get; set; }
+
+
+       
+
     }
 }

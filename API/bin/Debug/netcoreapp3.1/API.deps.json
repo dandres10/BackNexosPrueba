@@ -26,6 +26,7 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "Base.Datos": "1.0.0",
+          "Base.Negocio": "1.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.5",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.5",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -1303,6 +1304,7 @@
       "Base.Datos/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Base.IC": "1.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5"
         },
@@ -1311,6 +1313,32 @@
         },
         "compile": {
           "Base.Datos.dll": {}
+        }
+      },
+      "Base.IC/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.5"
+        },
+        "runtime": {
+          "Base.IC.dll": {}
+        },
+        "compile": {
+          "Base.IC.dll": {}
+        }
+      },
+      "Base.Negocio/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Base.Datos": "1.0.0",
+          "Base.IC": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.5"
+        },
+        "runtime": {
+          "Base.Negocio.dll": {}
+        },
+        "compile": {
+          "Base.Negocio.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -3594,6 +3622,16 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "Base.Datos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Base.IC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Base.Negocio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -19,8 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Clases\DAL\" />
-    <Folder Include="Clases\DO\" />
+    <ProjectReference Include="..\Base.IC\Base.IC.csproj" />
   </ItemGroup>
 
 </Project>

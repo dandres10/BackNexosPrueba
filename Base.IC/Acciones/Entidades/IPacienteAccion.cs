@@ -1,21 +1,19 @@
-﻿using Base.IC.Clases;
-using Base.IC.DTO.EntidadesRepositorio;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Base.IC.Acciones.Entidades
+﻿namespace Base.IC.Acciones.Entidades
 {
+    using Base.IC.Clases;
+    using Base.IC.DTO.EntidadesRepositorio;
+    using System.Threading.Tasks;
+
     public interface IPacienteAccion
     {
-        Respuesta<IPacienteDTO> GuardarPaciente(IPacienteDTO paciente);
+        Task<Respuesta<IPacienteDTO>>  GuardarPaciente(IPacienteDTO paciente);
 
-        Respuesta<IPacienteDTO> EditarPaciente(IPacienteDTO paciente);
+        Task<Respuesta<IPacienteDTO>> EditarPaciente(IPacienteDTO paciente);
 
-        Respuesta<IPacienteDTO> ConsultarListaPacientes();
+        Task<Respuesta<IPacienteDTO>> ConsultarListaPacientes();
 
-        Respuesta<IPacienteDTO> EliminarPaciente(IPacienteDTO paciente);
+        Task<Respuesta<IPacienteDTO>> EliminarPaciente(IPacienteDTO paciente);
 
-        Respuesta<IPacienteDTO> ConsultarPaciente(IPacienteDTO paciente);
+        Task<Respuesta<IPacienteDTO>> ConsultarPaciente(IPacienteDTO paciente);
     }
 }

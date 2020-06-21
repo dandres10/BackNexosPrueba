@@ -1363,6 +1363,7 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Base.IC": "1.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5"
         },
@@ -1371,6 +1372,42 @@
         },
         "runtime": {
           "bin/placeholder/Base.Datos.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Base.IC/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.5"
+        },
+        "compile": {
+          "bin/placeholder/Base.IC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Base.IC.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Base.Negocio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Base.Datos": "1.0.0",
+          "Base.IC": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.5"
+        },
+        "compile": {
+          "bin/placeholder/Base.Negocio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Base.Negocio.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -5202,12 +5239,23 @@
       "type": "project",
       "path": "../Base.Datos/Base.Datos.csproj",
       "msbuildProject": "../Base.Datos/Base.Datos.csproj"
+    },
+    "Base.IC/1.0.0": {
+      "type": "project",
+      "path": "../Base.IC/Base.IC.csproj",
+      "msbuildProject": "../Base.IC/Base.IC.csproj"
+    },
+    "Base.Negocio/1.0.0": {
+      "type": "project",
+      "path": "../Base.Negocio/Base.Negocio.csproj",
+      "msbuildProject": "../Base.Negocio/Base.Negocio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 7.0.0",
       "Base.Datos >= 1.0.0",
+      "Base.Negocio >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.5",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.5"
     ]
@@ -5245,6 +5293,9 @@
           "projectReferences": {
             "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.Datos\\Base.Datos.csproj": {
               "projectPath": "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.Datos\\Base.Datos.csproj"
+            },
+            "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.Negocio\\Base.Negocio.csproj": {
+              "projectPath": "C:\\Users\\dandr\\Desktop\\Prueba\\BackNexosPrueba\\Base.Negocio\\Base.Negocio.csproj"
             }
           }
         }
