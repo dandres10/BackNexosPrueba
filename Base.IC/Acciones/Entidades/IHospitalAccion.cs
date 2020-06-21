@@ -2,9 +2,12 @@
 {
     using Base.IC.Clases;
     using Base.IC.DTO.EntidadesRepositorio;
+    using System.Threading.Tasks;
 
     public interface IHospitalAccion
     {
-        Respuesta<IHospitalDTO> ConsultarListaPacientes();
+        Task<Respuesta<IHospitalDTO>> ConsultarListaHospitales();
+
+        Task<Respuesta<IHospitalDTO>> ConsultarHospital(IHospitalDTO hospital);
     }
 }
