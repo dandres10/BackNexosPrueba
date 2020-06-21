@@ -2,17 +2,14 @@
 {
     using Base.IC.Clases;
     using Base.IC.DTO.EntidadesRepositorio;
+    using System.Threading.Tasks;
 
     public interface IDoctorAccion
     {
-        Respuesta<IDoctorDTO> GuardarDoctor(IDoctorDTO doctor);
+        Task<Respuesta<IDoctorDTO>> GuardarDoctor(IDoctorDTO doctor);
 
-        Respuesta<IDoctorDTO> EditarDoctor(IDoctorDTO doctor);
+        Task<Respuesta<IDoctorDTO>> ConsultarListaDoctores();
 
-        Respuesta<IDoctorDTO> ConsultarListaDoctores();
-
-        Respuesta<IDoctorDTO> EliminarDoctor(IDoctorDTO doctor);
-
-        Respuesta<IDoctorDTO> ConsultarDoctor(IDoctorDTO doctor);
+        Task<Respuesta<IDoctorDTO>> ConsultarDoctor(IDoctorDTO doctor);
     }
 }

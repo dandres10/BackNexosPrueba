@@ -4,7 +4,6 @@
     using Base.IC.Acciones.Entidades;
     using Base.IC.Clases;
     using Base.IC.DTO.EntidadesRepositorio;
-    using System;
     using System.Threading.Tasks;
 
     public class PacienteBL : IPacienteAccion

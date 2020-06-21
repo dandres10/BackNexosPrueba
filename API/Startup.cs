@@ -14,7 +14,6 @@ namespace API
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
-    using System.Collections.Generic;
 
     public class Startup
     {
@@ -30,16 +29,22 @@ namespace API
         {
             services.AddAutoMapper(configuration =>
             {
-            
+                //Mapper Paciente
                 configuration.CreateMap<Respuesta<PacienteCO>, Respuesta<IPacienteDTO>>().ReverseMap();
-                configuration.CreateMap<PacienteCO,IPacienteDTO>().ReverseMap();
+                configuration.CreateMap<PacienteCO, IPacienteDTO>().ReverseMap();
                 configuration.CreateMap<Paciente, IPacienteDTO>().ReverseMap();
-                
-
-
+                //Maper Doctor
+                configuration.CreateMap<Respuesta<DoctorCO>, Respuesta<IDoctorDTO>>().ReverseMap();
+                configuration.CreateMap<DoctorCO, IDoctorDTO>().ReverseMap();
+                configuration.CreateMap<Doctor, IDoctorDTO>().ReverseMap();
             }, typeof(Startup));
+            //Paciente
             services.AddScoped<PacienteDAL>();
-            services.AddScoped<PacienteBL>(); 
+            services.AddScoped<PacienteBL>();
+            //Doctor
+            services.AddScoped<DoctorDAL>();
+            services.AddScoped<DoctorBL>();
+
             services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("AppConnection")));
             services.AddControllers();
         }

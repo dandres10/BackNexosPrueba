@@ -47,7 +47,6 @@
                 listaMensajes.Add(MensajesBase.ConsultaFallida);
                 Respuesta = Respuestas.Fallida(listaMensajes);
             }
-
             return Respuesta;
         }
 
