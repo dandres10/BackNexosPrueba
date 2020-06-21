@@ -37,6 +37,10 @@ namespace API
                 configuration.CreateMap<Respuesta<DoctorCO>, Respuesta<IDoctorDTO>>().ReverseMap();
                 configuration.CreateMap<DoctorCO, IDoctorDTO>().ReverseMap();
                 configuration.CreateMap<Doctor, IDoctorDTO>().ReverseMap();
+                //Maper Especilidad
+                configuration.CreateMap<Respuesta<EspecialidadCO>, Respuesta<IEspecialidadDTO>>().ReverseMap();
+                configuration.CreateMap<EspecialidadCO, IEspecialidadDTO>().ReverseMap();
+                configuration.CreateMap<Especialidad, IEspecialidadDTO>().ReverseMap();
             }, typeof(Startup));
             //Paciente
             services.AddScoped<PacienteDAL>();
@@ -44,6 +48,9 @@ namespace API
             //Doctor
             services.AddScoped<DoctorDAL>();
             services.AddScoped<DoctorBL>();
+            //Especialidad
+            services.AddScoped<EspecialidadDAL>();
+            services.AddScoped<EspecialidadBL>();
 
             services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("AppConnection")));
             services.AddControllers();

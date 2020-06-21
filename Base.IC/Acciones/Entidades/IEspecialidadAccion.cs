@@ -2,9 +2,12 @@
 {
     using Base.IC.Clases;
     using Base.IC.DTO.EntidadesRepositorio;
+    using System.Threading.Tasks;
 
     public interface IEspecialidadAccion
     {
-        Respuesta<IEspecialidadDTO> ConsultarListaPacientes();
+        Task<Respuesta<IEspecialidadDTO>> ConsultarListaEspecialidades();
+
+        Task<Respuesta<IEspecialidadDTO>> ConsultarEspecialidad(IEspecialidadDTO especialidad);
     }
 }

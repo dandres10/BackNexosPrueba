@@ -18,7 +18,7 @@
         private readonly IMapper mapper;
         private Respuesta<IDoctorDTO> Respuesta;
         private Respuestas<IDoctorDTO> Respuestas;
-        private List<IDoctorDTO> listaPaciente;
+        private List<IDoctorDTO> listaDoctor;
         private List<string> listaMensajes;
         private Doctor data;
 
@@ -29,7 +29,7 @@
             this.context = context;
             this.mapper = mapper;
             this.listaMensajes = new List<string>();
-            this.listaPaciente = new List<IDoctorDTO>();
+            this.listaDoctor = new List<IDoctorDTO>();
             this.data = new Doctor();
         }
 
@@ -46,9 +46,9 @@
                 }
                 else
                 {
-                    listaPaciente.Add(data);
+                    listaDoctor.Add(data);
                     listaMensajes.Add(MensajesBase.ConsultaExitosa);
-                    Respuesta = Respuestas.Exitosa(listaPaciente, listaMensajes);
+                    Respuesta = Respuestas.Exitosa(listaDoctor, listaMensajes);
                 }
             }
             catch (Exception)
@@ -63,9 +63,9 @@
         {
             try
             {
-                listaPaciente = mapper.Map<List<IDoctorDTO>>(await context.Doctor.ToListAsync());
+                listaDoctor = mapper.Map<List<IDoctorDTO>>(await context.Doctor.ToListAsync());
                 listaMensajes.Add(MensajesBase.ConsultaExitosa);
-                Respuesta = Respuestas.Exitosa(listaPaciente, listaMensajes);
+                Respuesta = Respuestas.Exitosa(listaDoctor, listaMensajes);
             }
             catch (Exception)
             {
@@ -79,11 +79,11 @@
         {
             try
             {
-                listaPaciente.Add(doctor);
+                listaDoctor.Add(doctor);
                 context.Add(mapper.Map<Doctor>(doctor));
                 await context.SaveChangesAsync();
                 listaMensajes.Add(MensajesBase.GuardadoExitoso);
-                Respuesta = Respuestas.Exitosa(listaPaciente, listaMensajes);
+                Respuesta = Respuestas.Exitosa(listaDoctor, listaMensajes);
             }
             catch (Exception)
             {
