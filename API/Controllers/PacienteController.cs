@@ -34,7 +34,7 @@
             return mapper.Map<Respuesta<PacienteCO>>(await pacienteBL.ConsultarListaPacientes());
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("ConsultarPaciente")]
         public async Task<Respuesta<PacienteCO>> ConsultarPaciente(PacienteConsultaCO paciente)
         {
@@ -50,9 +50,9 @@
             return mapper.Map<Respuesta<PacienteCO>>(await pacienteBL.EditarPaciente(mapper.Map<IPacienteDTO>(paciente)));
         }
 
-        [HttpDelete]
+        [HttpPost]
         [Route("EliminarPaciente")]
-        public async Task<Respuesta<PacienteCO>> EliminarPaciente(PacienteCO paciente)
+        public async Task<Respuesta<PacienteCO>> EliminarPaciente(PacienteConsultaCO paciente)
         {
             logger.LogInformation(LoggerPaciente.EliminarPaciente);
             return mapper.Map<Respuesta<PacienteCO>>(await pacienteBL.EliminarPaciente(mapper.Map<IPacienteDTO>(paciente)));
