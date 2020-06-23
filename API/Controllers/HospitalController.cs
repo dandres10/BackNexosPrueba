@@ -20,7 +20,7 @@
             this.mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("ConsultarHospital")]
         public async Task<Respuesta<HospitalCO>> ConsultarHospital(HospitalCO hospital)
         {

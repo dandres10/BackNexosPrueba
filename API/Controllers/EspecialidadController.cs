@@ -20,7 +20,7 @@
             this.mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("ConsultarEspecialidad")]
         public async Task<Respuesta<EspecialidadCO>> ConsultarEspecialidad(EspecialidadCO especialidad)
         {

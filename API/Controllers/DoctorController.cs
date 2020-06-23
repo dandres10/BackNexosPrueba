@@ -26,7 +26,7 @@
             logger.LogInformation(LoggerDoctor.CapaControlador);
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("ConsultarDoctor")]
         public async Task<Respuesta<DoctorCO>> ConsultarDoctor(DoctorConsultaCO doctor)
         {
